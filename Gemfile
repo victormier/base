@@ -30,3 +30,10 @@ group :assets do
   # backoffice style framework
   gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 end
+
+# Development
+group :development do
+  gem 'thin'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end
