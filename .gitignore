@@ -6,6 +6,7 @@
 
 # Ignore bundler config
 /.bundle
+/vendor/bundle
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
@@ -13,3 +14,15 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore mac files
+.DS_Store
+/**/.DS_Store
+
+# Ignore uploads
+public/uploads/*
+public/system/*
+
+# Igonre nom modules
+doc/styles/node_modules/
+doc/styles/npm-debug.log
