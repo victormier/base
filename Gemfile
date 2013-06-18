@@ -10,6 +10,7 @@ gem 'pg'
 # Frontend
 gem 'slim-rails'
 gem 'jquery-rails'
+gem 'simple_form'
 
 # Gems used only for assets and not required
 # in production environments by default.
