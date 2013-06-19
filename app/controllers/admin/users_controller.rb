@@ -1,4 +1,8 @@
 class Admin::UsersController < Admin::ApplicationController
+  def index
+    @users = User.all
+  end
+
   def new
     @user = User.new
   end

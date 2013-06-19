@@ -1,0 +1,21 @@
+= render 'header'
+
+- if @users.any?
+  table.table.table-striped
+    thead
+      tr
+        th Email
+        th
+    tbody
+      - @users.each do |user|
+        tr
+          td= user.email
+          td
+            /
+              - if user.pending?
+                =' link_to 'Approve', approve_admin_user_path(user), :class => 'btn btn-success btn-mini', :method => :post
+                = link_to 'Reject', reject_admin_user_path(user), :class => 'btn btn-danger btn-mini', :method => :post
+              = link_to 'Edit', admin_user_path(user), :class => 'btn pull-right'
+- else
+  .well
+    | There are no users to show

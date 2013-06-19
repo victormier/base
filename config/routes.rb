@@ -1,7 +1,7 @@
 Base::Application.routes.draw do
   # Backoffice
   namespace :admin do
-    resources :users, only: [:new, :create]
+    resources :users, only: [:index, :new, :create]
 
     root to: 'users#new'
   end
