@@ -4,7 +4,7 @@
       = link_to "Base", admin_root_path, :class => 'brand'
       - if current_user
         ul.nav
-          li= activable_link_to "Menu Item 1", '#'
+          li= activable_link_to "Users", admin_users_path
           li= activable_link_to "Menu Item 2", '#'
       ul.nav.pull-right
         - if logged_in?
