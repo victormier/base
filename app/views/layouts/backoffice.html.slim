@@ -1,0 +1,12 @@
+doctype 5
+html(lang=I18n.locale)
+  head
+    title Base Admin
+    = stylesheet_link_tag :backoffice
+    = csrf_meta_tag
+
+  body(class=view_id)
+    = yield
+
+  = javascript_include_tag :backoffice
+  = yield :custom_js

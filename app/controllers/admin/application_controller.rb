@@ -3,6 +3,8 @@ class Admin::ApplicationController < ActionController::Base
 
   before_filter :require_login
 
+  layout 'backoffice'
+
   protected
 
   def not_authenticated
