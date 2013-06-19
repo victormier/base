@@ -4,5 +4,10 @@ Base::Application.routes.draw do
     resources :users, only: [:new, :create]
   end
 
-  root :to => 'static#index'
+  resources :sessions, only: [:new, :create, :destroy]
+  # Sessions
+  get 'logout' => 'sessions#destroy', as: 'logout'
+  get 'login' => 'sessions#new', as: 'login'
+
+  root to: 'static#index'
 end
