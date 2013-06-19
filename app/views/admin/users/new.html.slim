@@ -1,4 +1,6 @@
-= simple_form_for [:admin, @user] do |f|
+= render 'header', subtitle: 'Create new user'
+
+= simple_form_for [:admin, @user], defaults: { wrapper: :with_controls, label_html: { class: 'form--horizontal__control-label' } } do |f|
   = f.input :email
   = f.input :password
   = f.input :password_confirmation
