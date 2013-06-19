@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/metaskills/less-rails.git
+  revision: 6f01458b76556645755f5d23f4687b72d62a06c5
+  specs:
+    less-rails (2.3.3)
+      actionpack (>= 3.1)
+      less (~> 2.3.1)
+
+GIT
   remote: git://github.com/seyhunak/twitter-bootstrap-rails.git
   revision: dbbdee23b9ac809ffbd9d73a87d1293c1f8f2e54
   specs:
@@ -73,11 +81,8 @@ GEM
     json (1.8.0)
     jwt (0.1.8)
       multi_json (>= 1.5)
-    less (2.2.2)
+    less (2.3.2)
       commonjs (~> 0.2.6)
-    less-rails (2.2.6)
-      actionpack (>= 3.1)
-      less (~> 2.2.0)
     libv8 (3.11.8.17)
     mail (2.5.4)
       mime-types (~> 1.16)
@@ -174,7 +179,7 @@ DEPENDENCIES
   binding_of_caller
   coffee-rails (~> 3.2.1)
   jquery-rails
-  less-rails
+  less-rails!
   pg
   rails (= 3.2.13)
   sass
