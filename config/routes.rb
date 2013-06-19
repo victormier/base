@@ -3,7 +3,7 @@ Base::Application.routes.draw do
   namespace :admin do
     resources :users, only: [:index, :new, :create, :destroy]
 
-    root to: 'users#new'
+    root to: 'users#index'
   end
 
   resources :sessions, only: [:new, :create, :destroy]
