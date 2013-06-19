@@ -1,0 +1,8 @@
+= render 'submenu'
+
+h1.page-header
+  ' Users
+  - if defined? subtitle
+    small= subtitle
+
+  = yield :actions

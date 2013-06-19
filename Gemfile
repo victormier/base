@@ -19,7 +19,7 @@ group :assets do
   # CSS and JS
   gem 'sass'
   gem 'sass-rails',   '~> 3.2.3'
-  gem "less-rails"
+  gem 'less-rails', git: 'git://github.com/metaskills/less-rails.git'
   gem 'coffee-rails', '~> 3.2.1'
 
   # javascript runtime

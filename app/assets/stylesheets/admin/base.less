@@ -1,0 +1,32 @@
+@base_top_padding: 70px;
+
+body{
+  padding-top: @base_top_padding;
+}
+
+.subnav-fixed {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  right: 0;
+  z-index: 1020;
+
+  .navbar-inner {
+    min-height: 30px;
+
+    .nav {
+      width: 1170px;
+      margin: 0 auto;
+      padding: 0 1px;
+      float: none;
+
+      > li > a {
+        padding: 5px 15px 5px;
+      }
+    }
+  }
+}
+
+.subnav-fixed-separator {
+  padding-top: 5px;
+}

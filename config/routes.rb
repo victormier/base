@@ -1,7 +1,9 @@
 Base::Application.routes.draw do
   # Backoffice
   namespace :admin do
-    resources :users, only: [:new, :create]
+    resources :users, only: [:index, :new, :create, :destroy]
+
+    root to: 'users#index'
   end
 
   resources :sessions, only: [:new, :create, :destroy]

@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  layout 'backoffice'
+
   def new
     @user = User.new
   end

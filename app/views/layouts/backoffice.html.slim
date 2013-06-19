@@ -1,0 +1,19 @@
+doctype 5
+html(lang=I18n.locale)
+  head
+    title Base Admin
+    = stylesheet_link_tag :backoffice
+    = csrf_meta_tag
+
+  body.container(class=view_id)
+    = render 'admin/shared/menu'
+    // Optional submenu
+    - if content_for?(:submenu)
+      = render 'admin/shared/submenu'
+      .subnav-fixed-separator
+    = render "admin/shared/alert"
+
+    = yield
+
+  = javascript_include_tag :backoffice
+  = yield :custom_js
