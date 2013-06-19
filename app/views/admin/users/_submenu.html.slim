@@ -1,0 +1,5 @@
+- content_for :submenu do
+  = navigation_item_for('#') do
+    = link_to 'All users', admin_users_path
+  = navigation_item_for('#') do
+    = link_to 'Create new user', new_admin_user_path
