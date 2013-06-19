@@ -7,8 +7,10 @@ html(lang=I18n.locale)
 
   body.container(class=view_id)
     = render 'admin/shared/menu'
-    // Optional submenu!
-    = render 'admin/shared/submenu'
+    // Optional submenu
+    - if content_for?(:submenu)
+      = render 'admin/shared/submenu'
+      .subnav-fixed-separator
     = render "admin/shared/alert"
 
     = yield
