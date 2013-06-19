@@ -1,0 +1,11 @@
+#admin_menu.navbar.navbar-inverse.navbar-fixed-top
+  .navbar-inner
+    .container
+      = link_to "Base", admin_root_path, :class => 'brand'
+      ul.nav
+        li= activable_link_to "Menu Item 1", '#'
+        li= activable_link_to "Menu Item 2", '#'
+      ul.nav.pull-right
+        - if logged_in?
+          li.name= current_user.email
+        li= link_to "Logout", logout_path(:i18n_locale => I18n.locale)

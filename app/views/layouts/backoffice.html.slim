@@ -5,7 +5,12 @@ html(lang=I18n.locale)
     = stylesheet_link_tag :backoffice
     = csrf_meta_tag
 
-  body(class=view_id)
+  body.container(class=view_id)
+    = render 'admin/shared/menu'
+    // Optional submenu!
+    = render 'admin/shared/submenu'
+    = render "admin/shared/alert"
+
     = yield
 
   = javascript_include_tag :backoffice
