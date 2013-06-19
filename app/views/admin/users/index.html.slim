@@ -1,3 +1,6 @@
+- content_for :actions do
+  = link_to 'Create new user', new_admin_user_path, class: "btn btn-success pull-right"
+
 = render 'header'
 
 - if @users.any?
@@ -12,11 +15,6 @@
           td= user.email
           td
             = link_to 'Delete', [:admin, user], confirm: "Are you sure?", :method => :delete, class: "btn btn-danger pull-right"
-            /
-              - if user.pending?
-                =' link_to 'Approve', approve_admin_user_path(user), :class => 'btn btn-success btn-mini', :method => :post
-                = link_to 'Reject', reject_admin_user_path(user), :class => 'btn btn-danger btn-mini', :method => :post
-              = link_to 'Edit', admin_user_path(user), :class => 'btn pull-right'
 - else
   .well
     | There are no users to show
