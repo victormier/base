@@ -1,0 +1,9 @@
+doctype 5
+html(lang=I18n.locale)
+  = render "shared/head"
+
+  body(class=view_id)
+    = yield
+
+  = javascript_include_tag :application
+  = yield :custom_js
