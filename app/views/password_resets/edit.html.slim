@@ -2,8 +2,8 @@ h1.page-header= t('title', scope: 'password_resets')
 
 = simple_form_for @user, :url => password_reset_path(@user), :method => :put do |f|
   = f.input :email, value: @user.email, disabled: true
-  = f.input :password, placeholder: t('.new_password')
-  = f.input :password_confirmation, placeholder: t('.type_again')
+  = f.input :password, label: t('password', scope: 'users.fields'), placeholder: t('.new_password')
+  = f.input :password_confirmation, label: t('password_confirmation', scope: 'users.fields'), placeholder: t('.type_again')
   = f.input :token, :as => :hidden, :input_html => { :value => @token }
 
   = f.button :button, t('.reset_password'), class: 'btn--primary'

@@ -34,13 +34,14 @@ class PasswordResetsController < ApplicationController
 
       @user.password_confirmation = params[:user][:password_confirmation]
       if @user.change_password!(params[:user][:password])
+        flash[:notice] = t('password_updated', scope: 'flashes.password_resets_controller')
         redirect_to admin_root_path
       else
-        flash[:alert] = t('password_not_set', :scope => 'flashes.password_resets_controller')
+        flash[:alert] = t('password_not_set', scope: 'flashes.password_resets_controller')
         render :action => "edit"
       end
     else
-      flash[:alert] = t('password_not_set', :scope => 'flashes.password_resets_controller')
+      flash[:alert] = t('password_not_set', scope: 'flashes.password_resets_controller')
       render :action => "edit"
     end
   end

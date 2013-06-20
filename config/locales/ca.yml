@@ -3,7 +3,7 @@ ca:
     create: Crear
     delete: Eliminar
     logout: Logout
-    login: Login
+    login: Entrar
     you_sure: N'estàs segur?
   users:
     title: Usuaris
@@ -20,7 +20,7 @@ ca:
   password_resets:
     title: Reestablir contrasenya
     new:
-      enter_email: 'Por favor, introduce tu email:'
+      enter_email: 'Introdueix el teu email:'
       reset_my_password: Reestablir contrasenya
     edit:
       reset_password: Reestablir contrasenya
@@ -36,8 +36,8 @@ ca:
       great_day: Que tinguis un bon dia!
   flashes:
     password_resets_controller:
-      user_not_found: "Ho sentim, no hem pogut trobar un usuario amb aquest email."
-      instructions_sent: Hem enviat instrucciones per a reestablir la contrasenya al teu email.
+      user_not_found: "Ho sentim, no hem pogut trobar un usuari amb aquest email."
+      instructions_sent: Hem enviat instruccions per a reestablir la contrasenya al teu email.
       password_updated: La contrasenya s'ha reestablert correctament
       password_not_set: Contrasenya no reestablerta. Siusplau, corregeix els errors
     sessions_controller:
