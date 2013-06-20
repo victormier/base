@@ -1,0 +1,4 @@
+#forgot-password-form
+  = form_tag password_resets_path, :method => :post do
+    = text_field_tag :email, nil, placeholder: 'Type here your email'
+    = button_tag t('.reset_my_password'), class: 'btn btn--primary'
