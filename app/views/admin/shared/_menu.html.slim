@@ -9,4 +9,4 @@
       ul.nav.pull-right
         - if logged_in?
           li.name= current_user.email
-        li= link_to "Logout", logout_path(:i18n_locale => I18n.locale)
+          li= link_to "Logout", logout_path(:i18n_locale => I18n.locale)
