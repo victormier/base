@@ -6,6 +6,6 @@ class Notifier < ActionMailer::Base
   def reset_password_email(user)
     @user = user
 
-    mail(to: user.email, subject: "Reset password instructions")
+    mail(to: user.email, subject: t('subject', :scope => 'notifier.reset_password_email'))
   end
 end

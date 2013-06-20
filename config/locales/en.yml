@@ -2,4 +2,17 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  notifier:
+    reset_password_email:
+      subject: 'Reset password instructions'
+      hello: Hello,
+      requested_password: You have requested to reset your password
+      follow_link: To choose a new password, just follow this follow this link
+      reset_password: Reset password
+      great_day: Have a great day!
+  flashes:
+    password_resets_controller:
+      user_not_found: "Sorry, we couldn't find a user with this email."
+      instructions_sent: Instructions to reset your password have been sent to your email.
+      password_updated: Password has been succesfully updated
+      password_not_set: Password was not set. Please correct the fields
