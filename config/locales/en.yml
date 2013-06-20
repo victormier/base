@@ -2,11 +2,30 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  actions:
+    create: Create
+    delete: Delete
+    logout: Logout
+    login: Sign in
+    you_sure: Are you sure?
+  users:
+    title: Users
+    all_users: All users
+    create_user: Create new user
+    index:
+      no_users: There are no users to show
+  sessions:
+    new:
+      forgot_password: Forgot your password?
   password_resets:
     title: Reset password
     new:
       enter_email: 'Please enter your email:'
       reset_my_password: Reset password
+    edit:
+      reset_password: Reset password
+      new_password: New password
+      type_again: Type in password again
   notifier:
     reset_password_email:
       subject: 'Reset password instructions'

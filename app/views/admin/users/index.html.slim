@@ -1,5 +1,5 @@
 - content_for :actions do
-  = link_to 'Create new user', new_admin_user_path, class: "btn btn-success pull-right"
+  = link_to t('create_user', scope: 'users'), new_admin_user_path, class: "btn btn-success pull-right"
 
 = render 'header'
 
@@ -14,7 +14,7 @@
         tr
           td= user.email
           td
-            = link_to 'Delete', [:admin, user], confirm: "Are you sure?", :method => :delete, class: "btn btn-danger pull-right"
+            = link_to t('delete', scope: 'actions'), [:admin, user], confirm: t('you_sure', scope: 'actions'), :method => :delete, class: "btn btn-danger pull-right"
 - else
   .well
-    | There are no users to show
+    = t('.no_users')

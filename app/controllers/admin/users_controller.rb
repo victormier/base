@@ -21,9 +21,14 @@ class Admin::UsersController < Admin::ApplicationController
 
   def destroy
     @user = User.find(params[:id])
-    
-    @user.destroy
-    flash[:notice] = "User succesfully deleted"
-    redirect_to admin_users_path
+
+    if User.count <= 1 || @user == current_user
+      flash[:error] = "This user cannot be deleted"
+      redirect_to :back
+    else
+      @user.destroy
+      flash[:notice] = "User succesfully deleted"
+      redirect_to admin_users_path
+    end
   end
 end

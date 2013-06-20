@@ -4,7 +4,3 @@ h1.page-header= t('title', scope: 'password_resets')
   = simple_form_for :user, url: password_resets_path, :method => :post do |f|
     = f.input :email, label: t('.enter_email')
     = f.button :submit, value: t('.reset_my_password'), class: 'btn btn--primary'
-/
-  = form_tag password_resets_path, :method => :post do
-    = text_field_tag :email, nil, placeholder: 'Type here your email'
-    = button_tag t('.reset_my_password'), class: 'btn btn--primary'

@@ -1,4 +1,4 @@
-= render 'header', subtitle: 'Create new user'
+= render 'header', subtitle: t('create_user', scope: 'users')
 
 = simple_form_for [:admin, @user], defaults: { wrapper: :with_controls, label_html: { class: 'form--horizontal__control-label' } } do |f|
   = f.input :email
