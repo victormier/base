@@ -1,0 +1,50 @@
+ca:
+  actions:
+    create: Crear
+    delete: Eliminar
+    logout: Logout
+    login: Login
+    you_sure: N'estàs segur?
+  users:
+    title: Usuaris
+    all_users: Tots els usuaris
+    create_user: Crear nou usuari
+    index:
+      no_users: No hi ha usuarios a mostrar
+  sessions:
+    new:
+      forgot_password: Has oblidat la contrasenya?
+  password_resets:
+    title: Reestablir contrasenya
+    new:
+      enter_email: 'Por favor, introduce tu email:'
+      reset_my_password: Reestablir contrasenya
+    edit:
+      reset_password: Reestablir contrasenya
+      new_password: Nova contrasenya
+      type_again: Introdueix la contrasenya de nou
+  notifier:
+    reset_password_email:
+      subject: Reestablir contrasenya
+      hello: Hola!
+      requested_password: Has sol·licitat reestablir la teva contrasenya
+      follow_link: 'Per a escollir una nova contrasenya, fes click al següent enllaç:'
+      reset_password: Reestablir contrasenya
+      great_day: Que tinguis un bon dia!
+  flashes:
+    password_resets_controller:
+      user_not_found: "Ho sentim, no hem pogut trobar un usuario amb aquest email."
+      instructions_sent: Hem enviat instrucciones per a reestablir la contrasenya al teu email.
+      password_updated: La contrasenya s'ha reestablert correctament
+      password_not_set: Contrasenya no reestablerta. Siusplau, corregeix els errors
+    sessions_controller:
+      login_succesful: Has iniciat sessió correctament
+      login_failed: Inici de sessió erroni
+      logged_out: Has tancat sessió
+    admin_application_controller:
+      login_first: Inicia sessió siusplau.
+    users_controller:
+      user_created: Usuari creat correctament
+      creation_error: Hi ha hagut un error
+      deletion_error: Aquest usuari no es pot eliminar
+      user_deleted: Usuari eliminat correctament

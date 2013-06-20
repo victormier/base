@@ -1,0 +1,50 @@
+es:
+  actions:
+    create: Crear
+    delete: Eliminar
+    logout: Logout
+    login: Login
+    you_sure: Estás seguro?
+  users:
+    title: Usuarios
+    all_users: Todos los usuarios
+    create_user: Crear nuevo usuario
+    index:
+      no_users: No hay usuarios que mostrar
+  sessions:
+    new:
+      forgot_password: Has olvidado la contraseña?
+  password_resets:
+    title: Reestablecer contraseña
+    new:
+      enter_email: 'Por favor, introduce tu email:'
+      reset_my_password: Reestablecer contraseña
+    edit:
+      reset_password: Reestablecer contraseña
+      new_password: Nueva contraseña
+      type_again: Introduce la contraseña de nuevo
+  notifier:
+    reset_password_email:
+      subject: 'Reestablecer contraseña'
+      hello: Hola!
+      requested_password: Has pedido reestablecer tu contraseña
+      follow_link: 'Para elegir una nueva contraseña, haz click en el siguiente enlace:'
+      reset_password: Reestablecer contraseña
+      great_day: Que tengas un buen día!
+  flashes:
+    password_resets_controller:
+      user_not_found: "Lo sentimos, no hemos podido encontrar un usuario con este email."
+      instructions_sent: Hemos mandado instrucciones para reestablecer la contraseña a tu email.
+      password_updated: La contraseña ha sido reestablecida correctamente
+      password_not_set: Contraseña no reestablecida. Por favor, corrige los errores
+    sessions_controller:
+      login_succesful: Has iniciado sesión correctamente
+      login_failed: Inicio de sesión erróneo
+      logged_out: Has cerrado sesión
+    admin_application_controller:
+      login_first: Por favor, inicia sesión.
+    users_controller:
+      user_created: Usuario creado correctamente
+      creation_error: Ha habido un error
+      deletion_error: Este usuario no se puede eliminar
+      user_deleted: Usuario eliminado correctamente

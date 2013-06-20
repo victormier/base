@@ -41,7 +41,7 @@ en:
       password_updated: Password has been succesfully updated
       password_not_set: Password was not set. Please correct the fields
     sessions_controller:
-      login_succesful: Login successful. yiha
+      login_succesful: Login successful.
       login_failed: Login failed
       logged_out: Logged out!
     admin_application_controller:
