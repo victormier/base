@@ -2,12 +2,15 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  password_resets:
+    new:
+      reset_my_password: Reset password
   notifier:
     reset_password_email:
       subject: 'Reset password instructions'
       hello: Hello!
       requested_password: You have requested to reset your password
-      follow_link: To choose a new password, just follow this follow this link
+      follow_link: 'To choose a new password, just follow this follow this link:'
       reset_password: Reset password
       great_day: Have a great day!
   flashes:

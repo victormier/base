@@ -5,7 +5,7 @@ class PasswordResetsController < ApplicationController
 
   # Create a reset password request
   def create
-    @user = User.find_by_email(params[:email])
+    @user = User.find_by_email(params[:user][:email]) unless params[:user].nil?
 
     if @user
       @user.deliver_reset_password_instructions!
