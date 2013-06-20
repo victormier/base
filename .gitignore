@@ -23,6 +23,9 @@
 public/uploads/*
 public/system/*
 
-# Igonre nom modules
+# Ignore nom modules
 doc/styles/node_modules/
 doc/styles/npm-debug.log
+
+# Ignore some configuration files
+config/initializers/setup_mail.rb

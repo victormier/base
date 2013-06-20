@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
     password = user_params[:password].to_s
 
     if login(email, password, true)
-      redirect_back_or_to root_path, notice: 'Login successful'
+      redirect_back_or_to admin_root_path, notice: 'Login successful'
     else
       @user = User.new email: email
       flash.now[:alert] = "Login failed"
