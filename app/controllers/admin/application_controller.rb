@@ -8,6 +8,6 @@ class Admin::ApplicationController < ActionController::Base
   protected
 
   def not_authenticated
-    redirect_to login_path, :alert => "Please login first."
+    redirect_to login_path, alert: t('login_first', scope: 'flashes.admin_application_controller')
   end
 end

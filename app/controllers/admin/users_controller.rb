@@ -11,11 +11,11 @@ class Admin::UsersController < Admin::ApplicationController
     @user = User.new(params[:user])
 
     if @user.save
-      flash[:notice] = "User succesfully created"
-      render 'new'
+      flash[:notice] = t('user_created', scope: 'flashes.users_controller')
+      redirect_to admin_users_path
     else
-      flash[:error] = "There was an error"
-      redirect_to root_path
+      flash[:error] = t('creation_error', scope: 'flashes.users_controller')
+      render 'new'
     end
   end
 
@@ -23,11 +23,11 @@ class Admin::UsersController < Admin::ApplicationController
     @user = User.find(params[:id])
 
     if User.count <= 1 || @user == current_user
-      flash[:error] = "This user cannot be deleted"
+      flash[:error] = t('deletion_error', scope: 'flashes.users_controller')
       redirect_to :back
     else
       @user.destroy
-      flash[:notice] = "User succesfully deleted"
+      flash[:notice] = t('user_deleted', scope: 'flashes.users_controller')
       redirect_to admin_users_path
     end
   end

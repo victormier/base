@@ -40,3 +40,14 @@ en:
       instructions_sent: Instructions to reset your password have been sent to your email.
       password_updated: Password has been succesfully updated
       password_not_set: Password was not set. Please correct the fields
+    sessions_controller:
+      login_succesful: Login successful. yiha
+      login_failed: Login failed
+      logged_out: Logged out!
+    admin_application_controller:
+      login_first: Please login first.
+    users_controller:
+      user_created: User succesfully created
+      creation_error: There was an error
+      deletion_error: This user cannot be deleted
+      user_deleted: User succesfully deleted

@@ -10,17 +10,17 @@ class SessionsController < ApplicationController
     password = user_params[:password].to_s
 
     if login(email, password, true)
-      redirect_back_or_to admin_root_path, notice: 'Login successful'
+      redirect_back_or_to admin_root_path, notice: t('login_succesful', scope: 'flashes.sessions_controller')
     else
       @user = User.new email: email
-      flash.now[:alert] = "Login failed"
+      flash.now[:alert] = t('login_failed', scope: 'flashes.sessions_controller')
       render 'new'
     end
   end
 
   def destroy
     logout
-    redirect_to new_session_path, :notice => 'Logged out!'
+    redirect_to new_session_path, notice: t('logged_out', scope: 'flashes.sessions_controller')
   end
 
   private
