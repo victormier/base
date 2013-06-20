@@ -1,6 +1,6 @@
 = simple_form_for @user, url: sessions_path do |f|
   = f.input :email
-  = f.input :password
+  = f.input :password, label: t('password', scope: 'users.fields')
   = f.button :submit, value: t('login', scope: 'actions')
 
 = link_to t('.forgot_password'), new_password_reset_path

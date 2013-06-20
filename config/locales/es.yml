@@ -9,6 +9,9 @@ es:
     title: Usuarios
     all_users: Todos los usuarios
     create_user: Crear nuevo usuario
+    fields:
+      password: Contraseña
+      password_confirmation: Repite la contraseña
     index:
       no_users: No hay usuarios que mostrar
   sessions:

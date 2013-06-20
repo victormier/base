@@ -12,6 +12,9 @@ en:
     title: Users
     all_users: All users
     create_user: Create new user
+    fields:
+      password: Password
+      password_confirmation: Password confirmation
     index:
       no_users: There are no users to show
   sessions:

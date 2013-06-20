@@ -9,6 +9,9 @@ ca:
     title: Usuaris
     all_users: Tots els usuaris
     create_user: Crear nou usuari
+    fields:
+      password: Contrasenya
+      password_confirmation: Repeteix la contrasenya
     index:
       no_users: No hi ha usuarios a mostrar
   sessions:
