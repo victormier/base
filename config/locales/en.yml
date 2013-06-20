@@ -3,7 +3,9 @@
 
 en:
   password_resets:
+    title: Reset password
     new:
+      enter_email: 'Please enter your email:'
       reset_my_password: Reset password
   notifier:
     reset_password_email:

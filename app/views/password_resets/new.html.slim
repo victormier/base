@@ -1,6 +1,8 @@
+h1.page-header= t('title', scope: 'password_resets')
+
 #forgot-password-form
   = simple_form_for :user, url: password_resets_path, :method => :post do |f|
-    = f.input :email
+    = f.input :email, label: t('.enter_email')
     = f.button :submit, value: t('.reset_my_password'), class: 'btn btn--primary'
 /
   = form_tag password_resets_path, :method => :post do
