@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130620080359) do
+ActiveRecord::Schema.define(:version => 20130625185355) do
+
+  create_table "translations", :force => true do |t|
+    t.string  "locale"
+    t.string  "key"
+    t.text    "value"
+    t.text    "interpolations"
+    t.boolean "is_proc",        :default => false
+    t.boolean "stale",          :default => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email"

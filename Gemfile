@@ -19,6 +19,7 @@ gem 'sorcery'
 gem 'rails-i18n'
 gem 'i18n_routing'
 gem 'armot'
+gem 'interpret', ">= 1.1.1"
 
 group :assets do
   # CSS and JS
