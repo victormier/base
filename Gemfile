@@ -15,6 +15,9 @@ gem 'simple_form'
 # User management
 gem 'sorcery'
 
+# Routing and languages
+gem 'rails-i18n'
+
 group :assets do
   # CSS and JS
   gem 'sass'
