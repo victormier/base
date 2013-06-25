@@ -12,6 +12,7 @@ gem 'slim-rails'
 gem 'jquery-rails'
 gem 'simple_form'
 gem 'best_in_place'
+gem 'will_paginate'
 
 # User management
 gem 'sorcery'
