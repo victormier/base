@@ -1,5 +1,18 @@
 = render 'header'
 
+- content_for :actions do
+  .info.pull-right
+    h4#results.pull-right
+      =' @translations.total_entries
+      | resultats
+
+#search-form
+  = simple_form_for :search, :url => admin_translations_path, :method => :get do |f|
+    = f.hidden_field :language, :value => @search_params['language']
+    = f.input :key, :as => :string, :label => 'Key', :required => false, :input_html => { :value => @search_params[:key], :class => 'input-medium' }
+    = f.input :value, :as => :string, :label => 'Value', :required => false,  :input_html => { :value => @search_params[:value], :class => 'input-large' }
+    = f.button :submit, "Search"
+
 - if @translations.any?
   #translations-table
     = will_paginate @translations
