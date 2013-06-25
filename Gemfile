@@ -11,6 +11,7 @@ gem 'pg'
 gem 'slim-rails'
 gem 'jquery-rails'
 gem 'simple_form'
+gem 'best_in_place'
 
 # User management
 gem 'sorcery'
