@@ -18,6 +18,7 @@ gem 'sorcery'
 # Routing and languages
 gem 'rails-i18n'
 gem 'i18n_routing'
+gem 'armot'
 
 group :assets do
   # CSS and JS
