@@ -1,10 +1,15 @@
-= render 'header'
-
 - content_for :actions do
   .info.pull-right
+    #language-form.pull-right
+      = simple_form_for :search, :url => admin_translations_url, :method => :get do |f|
+        = f.hidden_field :key, :value => @search_params[:key]
+        = f.hidden_field :value, :value => @search_params[:value]
+        = f.input :language, :collection => [['Tots els idiomes','tots']].concat(LANGUAGES), :include_blank => false, :selected => @search_params[:language], :label => false, :input_html => {:class => 'submit-on-change input-medium'}
     h4#results.pull-right
       =' @translations.total_entries
       | resultats
+
+= render 'header'
 
 #search-form
   = simple_form_for :search, :url => admin_translations_path, :method => :get do |f|
