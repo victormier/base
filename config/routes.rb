@@ -1,4 +1,6 @@
 Base::Application.routes.draw do
+  mount Interpret::Engine => "/admin/interpret"
+
   # Backoffice
   namespace :admin do
     resources :users, only: [:index, :new, :create, :destroy]
