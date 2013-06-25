@@ -17,6 +17,7 @@ gem 'sorcery'
 
 # Routing and languages
 gem 'rails-i18n'
+gem 'i18n_routing'
 
 group :assets do
   # CSS and JS
