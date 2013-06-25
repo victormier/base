@@ -4,7 +4,8 @@ MAIN_LOCALE = :en
 
 LANGUAGES_BY_LOCALE = {
   "en" => 'English',
-  "es" => 'Castellano'
+  "es" => 'Castellano',
+  "ca" => 'Català'
 }
 
 LANGUAGES = LANGUAGES_BY_LOCALE.to_a.map(&:reverse)
