@@ -1,0 +1,11 @@
+table.table.table-striped
+  thead
+    th Language
+    th Key
+    th Value
+  tbody
+    - translations.each do |t|
+      tr
+        td= LANGUAGES_BY_LOCALE[t.locale]
+        td= t.key
+        td= best_in_place t, :value, :type => :textarea, :path => interpret.translation_url(t.locale, t.id), :sanitize => false

@@ -1,1 +1,9 @@
 = render 'header'
+
+- if @translations.any?
+  #translations-table
+    = will_paginate @translations
+    = render 'translations_table', :translations => @translations, :with_other => true
+    = will_paginate @translations
+- else
+  .leader.well No results to show
