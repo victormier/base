@@ -3,9 +3,14 @@ table.table.table-striped
     th Language
     th Key
     th Value
+    - if with_other
+      th
   tbody
     - translations.each do |t|
       tr
         td= LANGUAGES_BY_LOCALE[t.locale]
         td= t.key
         td= best_in_place t, :value, :type => :textarea, :path => interpret.translation_url(t.locale, t.id), :sanitize => false
+        - if with_other
+          td
+            = link_to "+", other_langs_admin_translation_url(t.id), :class => 'other_langs btn', :remote => true

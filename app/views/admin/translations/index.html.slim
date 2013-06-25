@@ -7,3 +7,23 @@
     = will_paginate @translations
 - else
   .leader.well No results to show
+
+#translations-modal.modal.hide.fade
+  .modal-header
+    button.close data-dismiss="modal" x
+    h3 Other languages
+  .modal-body
+
+- content_for :custom_js do
+  javascript:
+    $(document).ready(
+      function(){
+        $("a.other_langs").bind("ajax:success",
+          function(evt, data, status, xhr){
+            $("#translations-modal .modal-body").html(data);
+            $("#translations-modal").modal();
+          }).bind("ajax:error",
+          function(evt, data, status, xhr){
+            console.log('error retrieving data')
+          });
+    });
