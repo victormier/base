@@ -82,7 +82,7 @@ class Admin::TranslationsController < Admin::ApplicationController
       keys = 0
 
       Interpret::Translation.transaction do
-        xls = Excel.new(file.path, false, :ignore)
+        xls = Roo::Excel.new(file.path, false, :ignore)
         (xls.first_row+1..xls.last_row).each do |i|
           key = xls.cell(i, 1)
           in_foreign_language = xls.cell(i, 3)
