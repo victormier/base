@@ -58,3 +58,4 @@ es:
     logout: logout
   resources:
     users: usuarios
+    sessions: sesiones

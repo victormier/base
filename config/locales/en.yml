@@ -61,3 +61,4 @@ en:
     logout: logout
   resources:
     users: users
+    sessions: sessions
