@@ -90,6 +90,6 @@ namespace :deploy do
 
   task :interpret do
     puts 'Updating interpret ...'
-    puts `bundle exec rake interpret:update
+    puts `bundle exec rake interpret:update`
   end
 end
