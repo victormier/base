@@ -23,6 +23,9 @@ gem 'i18n_routing'
 gem 'armot'
 gem 'interpret', ">= 1.1.1"
 
+# Utils
+gem 'roo'
+
 group :assets do
   # CSS and JS
   gem 'sass'
