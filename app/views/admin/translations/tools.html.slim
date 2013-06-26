@@ -1,19 +1,19 @@
 = render 'header'
 
-h2.page-header Export
+h2.page-header= t('.export')
 table.table.table-striped
   - TRANSLATABLE_LOCALES.each do |locale|
     tr
       td= LANGUAGES_BY_LOCALE[locale.to_s]
       td
-        = link_to "Download all", export_admin_translations_url(:locale => locale, :all => true, :format => :xls), :class => "btn btn-mini btn-primary"
-        = link_to "Download pending", export_admin_translations_url(:locale => locale, :all => false, :format => :xls), :class => "btn btn-mini btn-warning"
+        = link_to t('.download_all'), export_admin_translations_url(:locale => locale, :all => true, :format => :xls), :class => "btn btn-mini btn-primary"
+        = link_to t('.download_pending'), export_admin_translations_url(:locale => locale, :all => false, :format => :xls), :class => "btn btn-mini btn-warning"
 
-h2.page-header Import
+h2.page-header= t('.import')
 table.table.table-striped
   .alert
     = link_to "x", "#", :class => :close, "data-dismiss" => :alert
-    p This action is potentially dangerous. Please, double check that the file format is the same as it was exported.
+    p= t('.dangerous_action')
 
   - TRANSLATABLE_LOCALES.each do |locale|
     tr
@@ -26,7 +26,7 @@ table.table.table-striped
 - content_for :custom_js do
   javascript:
     $("input[type=file]").change(function(){
-      $(this).before("Carregant arxiu...");
+      $(this).before(t('.loading_file'));
       $(this).parent().parent().submit();
       $(this).remove();
     });

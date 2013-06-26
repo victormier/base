@@ -5,6 +5,31 @@ ca:
     logout: Logout
     login: Entrar
     you_sure: N'estàs segur?
+  admin:
+    translations:
+      title: Traduccions
+      list: Llista
+      missing_link: Pendents
+      tools_link: Eines
+      language: Idioma
+      key: Clau
+      value: Valor
+      index:
+        results: resultats
+        all_languages: Tots els idiomes
+        search: Cerca
+        no_results: No hi ha resultats a mostrar
+        other_languages: Altres idiomes
+      missing:
+        value_in: Valor en
+        new_value: Nou valor
+      tools:
+        export: Exportar
+        import: Importar
+        download_all: Descarregar totes
+        download_pending: Descarregar pendents
+        dangerous_action: Aquesta acció és potencialment perillosa. Siusplau, revisa que el format del arxiu sigui el mateix que en el que va ser exportat.
+        loading_file: Cargando archivo...
   users:
     title: Usuaris
     all_users: Tots els usuaris

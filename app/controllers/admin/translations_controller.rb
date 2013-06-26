@@ -25,10 +25,10 @@ class Admin::TranslationsController < Admin::ApplicationController
     @translation = Interpret::Translation.new(params[:translation])
 
     if @translation.save
-      flash[:notice] = "S'ha creat una nova traducció per a #{@translation.key}"
+      flash[:notice] = t('new_translation', scope: 'flashes.translations_controller', key: @translation.key)
       redirect_to missing_admin_translations_url
     else
-      flash[:alert] = "Hi ha hagut un error al crear la traducció"
+      flash[:alert] = t('error_creating_translation', scope: 'flashes.translations_controller')
       redirect_to missing_admin_translations_url
     end
   end
@@ -48,7 +48,7 @@ class Admin::TranslationsController < Admin::ApplicationController
   def export
     locale = params[:locale].try(:to_sym)
     unless TRANSLATABLE_LOCALES.include?(locale)
-      flash[:alert] = "The language you are trying to translate to is not correct"
+      flash[:alert] = t('language_incorrect', scope: 'flashes.translations_controller')
       redirect_to admin_translations_url
     end
 
@@ -95,9 +95,9 @@ class Admin::TranslationsController < Admin::ApplicationController
         end
       end
 
-      redirect_to admin_translations_url, :notice => "Translations succesfully imported for #{keys} keys"
+      redirect_to admin_translations_url, :notice => t('translations_imported', scope: 'flashes.translations_controller', num_of_keys: keys)
     else
-      redirect_to admin_translations_url, :alert => "Attach a file, please"
+      redirect_to admin_translations_url, :alert => t('attach_file', scope: 'flashes.translations_controller')
     end
   end
 

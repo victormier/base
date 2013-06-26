@@ -1,8 +1,8 @@
 table.table.table-striped
   thead
-    th Language
-    th Key
-    th Value
+    th= t('language', scope: 'admin.translations')
+    th= t('key', scope: 'admin.translations')
+    th= t('value', scope: 'admin.translations')
     - if with_other
       th
   tbody

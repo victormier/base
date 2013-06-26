@@ -1,7 +1,7 @@
 - content_for :submenu do
   = navigation_item_for(admin_translations_path) do
-    = link_to 'List', admin_translations_path
+    = link_to t('list', scope: 'admin.translations'), admin_translations_path
   = navigation_item_for(missing_admin_translations_path) do
-    = link_to 'Missing', missing_admin_translations_path
+    = link_to t('missing_link', scope: 'admin.translations'), missing_admin_translations_path
   = navigation_item_for(tools_admin_translations_path) do
-    = link_to 'Tools', tools_admin_translations_path
+    = link_to t('tools_link', scope: 'admin.translations'), tools_admin_translations_path

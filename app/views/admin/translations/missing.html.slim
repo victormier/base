@@ -6,12 +6,12 @@
       - if translations.any?
         table.table
           thead
-            th Language
-            th Key
+            th= t('language', scope: 'admin.translations')
+            th= t('key', scope: 'admin.translations')
             th
-              ' Value in
+              =' t('.value_in')
               = LANGUAGES_BY_LOCALE[I18n.default_locale.to_s]
-            th New value
+            th= t('.new_value')
             th
           tbody
             - translations.each do |translation|
@@ -23,6 +23,6 @@
                   td= translation[:key]
                   td= translation[:base_value]
                   td= f.input :value, :as => :string, :label => false
-                  td= f.button :submit, "Create"
+                  td= f.button :submit, t('create', scope: 'actions')
   - else
     .leader.well Everything translated! No results to show

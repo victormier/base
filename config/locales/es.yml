@@ -5,6 +5,31 @@ es:
     logout: Logout
     login: Login
     you_sure: Estás seguro?
+  admin:
+    translations:
+      title: Traducciones
+      list: Lista
+      missing_link: Pendientes
+      tools_link: Herramientas
+      language: Idioma
+      key: Clave
+      value: Valor
+      index:
+        results: resultados
+        all_languages: Todos los idiomas
+        search: Buscar
+        no_results: No hay resultados que mostrar
+        other_languages: Otros idomas
+      missing:
+        value_in: Valor en
+        new_value: Nuevo valor
+      tools:
+        export: Exportar
+        import: Importar
+        download_all: Descargar todas
+        download_pending: Descargar pendientes
+        dangerous_action: Esta acción es potencialmente peligrosa. Por favor, revisa que el formato del archivo sea el mismo que en el que fue exportado.
+        loading_file: Cargando archivo...
   users:
     title: Usuarios
     all_users: Todos los usuarios

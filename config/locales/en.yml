@@ -8,6 +8,31 @@ en:
     logout: Logout
     login: Sign in
     you_sure: Are you sure?
+  admin:
+    translations:
+      title: Translations
+      list: List
+      missing_link: Missing
+      tools_link: Tools
+      language: Language
+      key: Key
+      value: Value
+      index:
+        results: results
+        all_languages: All languages
+        search: Search
+        no_results: No results to show
+        other_languages: Other languages
+      missing:
+        value_in: Value in
+        new_value: New value
+      tools:
+        export: Export
+        import: Import
+        download_all: Download all
+        download_pending: Download pending
+        dangerous_action: This action is potentially dangerous. Please, double check that the file format is the same as it was exported.
+        loading_file: Loading file...
   users:
     title: Users
     all_users: All users
@@ -54,6 +79,12 @@ en:
       creation_error: There was an error
       deletion_error: This user cannot be deleted
       user_deleted: User succesfully deleted
+    translations_controller:
+      new_translation: "New translation created for %{key}"
+      error_creating_translation: "There has been an error creating the translation"
+      language_incorrect: "The language you are trying to translate to is not correct"
+      translations_imported: "Translations succesfully imported for %{num_of_keys} keys"
+      attach_file: "Attach a file, please"
   path_names:
     new: new
     edit: edit
