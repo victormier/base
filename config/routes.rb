@@ -4,8 +4,9 @@ Base::Application.routes.draw do
   # Backoffice
   namespace :admin do
     resources :users, only: [:index, :new, :create, :destroy]
-    resources :translations, :only => :index do
+    resources :translations, :only => [:index, :create] do
       get :other_langs, :on => :member
+      get :missing, :on => :collection
     end
 
     root to: 'users#index'

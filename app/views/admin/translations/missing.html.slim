@@ -1,0 +1,28 @@
+= render 'header'
+
+#translations-missing-list
+  - if @missing_translations.any?
+    - @missing_translations.each do |locale, translations|
+      - if translations.any?
+        table.table
+          thead
+            th Language
+            th Key
+            th
+              ' Value in
+              = LANGUAGES_BY_LOCALE[MAIN_LOCALE.to_s]
+            th New value
+            th
+          tbody
+            - translations.each do |translation|
+              tr
+                = simple_form_for [:admin, @translation], :method => :post do |f|
+                  = f.hidden_field :locale, :value => locale
+                  = f.hidden_field :key, :value => translation[:key]
+                  td= LANGUAGES_BY_LOCALE[locale.to_s]
+                  td= translation[:key]
+                  td= translation[:base_value]
+                  td= f.input :value, :as => :string, :label => false
+                  td= f.button :submit, "Create"
+  - else
+    .leader.well Everything translated! No results to show

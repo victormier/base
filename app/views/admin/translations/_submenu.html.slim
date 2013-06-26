@@ -1,3 +1,5 @@
 - content_for :submenu do
   = navigation_item_for(admin_translations_path) do
     = link_to 'List', admin_translations_path
+  = navigation_item_for(missing_admin_translations_path) do
+    = link_to 'Missing', missing_admin_translations_path
