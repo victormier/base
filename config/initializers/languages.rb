@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-MAIN_LOCALE = :en
+I18n.default_locale = :en
 
 LANGUAGES_BY_LOCALE = {
   "en" => 'English',
@@ -10,4 +10,4 @@ LANGUAGES_BY_LOCALE = {
 
 LANGUAGES = LANGUAGES_BY_LOCALE.to_a.map(&:reverse)
 LOCALES = LANGUAGES_BY_LOCALE.keys.map(&:to_sym)
-TRANSLATABLE_LOCALES = LOCALES - [MAIN_LOCALE]
+TRANSLATABLE_LOCALES = LOCALES - [I18n.default_locale]
