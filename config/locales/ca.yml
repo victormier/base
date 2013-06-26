@@ -51,3 +51,11 @@ ca:
       creation_error: Hi ha hagut un error
       deletion_error: Aquest usuari no es pot eliminar
       user_deleted: Usuari eliminat correctament
+  path_names:
+    new: crear
+    edit: editar
+  named_routes_path:
+    logout: logout
+  resources:
+    users: usuaris
+    sessions: sesiones

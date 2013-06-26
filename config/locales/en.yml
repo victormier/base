@@ -54,3 +54,10 @@ en:
       creation_error: There was an error
       deletion_error: This user cannot be deleted
       user_deleted: User succesfully deleted
+  path_names:
+    new: new
+    edit: edit
+  named_routes_path:
+    logout: logout
+  resources:
+    users: users

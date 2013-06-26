@@ -10,7 +10,7 @@
             th Key
             th
               ' Value in
-              = LANGUAGES_BY_LOCALE[MAIN_LOCALE.to_s]
+              = LANGUAGES_BY_LOCALE[I18n.default_locale.to_s]
             th New value
             th
           tbody

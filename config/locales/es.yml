@@ -51,3 +51,10 @@ es:
       creation_error: Ha habido un error
       deletion_error: Este usuario no se puede eliminar
       user_deleted: Usuario eliminado correctamente
+  path_names:
+    new: crear
+    edit: editar
+  named_routes_path:
+    logout: logout
+  resources:
+    users: usuarios

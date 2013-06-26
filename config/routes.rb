@@ -15,12 +15,18 @@ Base::Application.routes.draw do
     root to: 'users#index'
   end
 
-  resources :sessions, only: [:new, :create, :destroy]
-  resources :password_resets, only: [:new, :create, :edit, :update]
+  scope ":i18n_locale" do
+    localized(LOCALES_STRING) do
+      resources :sessions, only: [:new, :create, :destroy]
+      resources :password_resets, only: [:new, :create, :edit, :update]
+    end
 
-  # Sessions
-  get 'logout' => 'sessions#destroy', as: 'logout'
-  get 'login' => 'sessions#new', as: 'login'
+    # Sessions
+    get 'logout' => 'sessions#destroy', as: 'logout'
+    get 'login' => 'sessions#new', as: 'login'
 
-  root to: 'static#index'
+    root to: 'static#index'
+  end
+
+  match '/' => 'static#index'
 end
