@@ -7,6 +7,9 @@ Base::Application.routes.draw do
     resources :translations, :only => [:index, :create] do
       get :other_langs, :on => :member
       get :missing, :on => :collection
+      get :tools, :on => :collection
+      get :export, :on => :collection
+      post :import, :on => :collection
     end
 
     root to: 'users#index'

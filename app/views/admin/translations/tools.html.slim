@@ -1,0 +1,32 @@
+= render 'header'
+
+h2.page-header Export
+table.table.table-striped
+  - TRANSLATABLE_LOCALES.each do |locale|
+    tr
+      td= LANGUAGES_BY_LOCALE[locale.to_s]
+      td
+        = link_to "Download all", export_admin_translations_url(:locale => locale, :all => true, :format => :xls), :class => "btn btn-mini btn-primary"
+        = link_to "Download pending", export_admin_translations_url(:locale => locale, :all => false, :format => :xls), :class => "btn btn-mini btn-warning"
+
+h2.page-header Import
+table.table.table-striped
+  .alert
+    = link_to "x", "#", :class => :close, "data-dismiss" => :alert
+    p This action is potentially dangerous. Please, double check that the file format is the same as it was exported.
+
+  - TRANSLATABLE_LOCALES.each do |locale|
+    tr
+      td= LANGUAGES_BY_LOCALE[locale.to_s]
+      td
+        = simple_form_for :import, :url => import_admin_translations_url do |f|
+          = f.input :file, :as => :file, :label => false
+          = f.input :locale, :as => :hidden, :input_html => { :value => locale }
+
+- content_for :custom_js do
+  javascript:
+    $("input[type=file]").change(function(){
+      $(this).before("Carregant arxiu...");
+      $(this).parent().parent().submit();
+      $(this).remove();
+    });
