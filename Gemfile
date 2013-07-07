@@ -43,4 +43,7 @@ group :development do
   gem 'thin'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'guard-livereload', require: false
+  gem 'rack-livereload'
+  gem 'rb-fsevent',       require: false
 end
