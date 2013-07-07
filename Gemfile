@@ -13,6 +13,7 @@ gem 'pg'
 gem 'slim-rails'
 gem 'jquery-rails'
 gem 'simple_form'
+gem 'quiet_assets'
 
 # User management
 gem 'sorcery'
