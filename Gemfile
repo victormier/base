@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '1.9.3'
+
 gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
@@ -13,6 +15,7 @@ gem 'jquery-rails'
 gem 'simple_form'
 gem 'best_in_place'
 gem 'will_paginate'
+gem 'quiet_assets'
 
 # User management
 gem 'sorcery'
@@ -25,6 +28,10 @@ gem 'interpret', ">= 1.1.1"
 
 # Utils
 gem 'roo'
+# File management
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog'
 
 group :assets do
   # CSS and JS
@@ -49,4 +56,7 @@ group :development do
   gem 'thin'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'guard-livereload', require: false
+  gem 'rack-livereload'
+  gem 'rb-fsevent',       require: false
 end
