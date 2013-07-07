@@ -15,6 +15,11 @@ gem 'simple_form'
 # User management
 gem 'sorcery'
 
+# File management
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog'
+
 group :assets do
   # CSS and JS
   gem 'sass'
