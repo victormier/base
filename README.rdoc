@@ -15,6 +15,27 @@ There's a known problem with translations related routes if translations table i
     # resources :password_resets, only: [:new, :create, :edit, :update]
   # end
 
+== Deployment
+
+There's a `deploy` rake task that deploys to heroku. Still not much tested. For setting it up you have to change the following lines in `lib/tasks/deploy.rake` (just the production one if you don't have a stagin environment):
+
+  PRODUCTION_APP = 'YOUR_PRODUCTION_APP_NAME_ON_HEROKU'
+  STAGING_APP = 'YOUR_STAGING_APP_NAME_ON_HEROKU'
+
+It marks deploys and releases and there are several tasks. The main one is:
+
+  rake deploy_production
+
+which runs the following tasks
+
+  rake deploy:push
+  rake deploy:migrate
+  rake deploy:interpret
+  rake deploy:restart
+  rake deploy:tag
+
+It is important not to miss the interpret update task, because otherways new translations won't work as expected.
+
 == Frontend
 
 There's a fronted/base_variables.less file on which you can override bootstrap base variables.
