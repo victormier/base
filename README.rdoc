@@ -38,7 +38,7 @@ It is important not to miss the interpret update task, because otherways new tra
 
 == Frontend
 
-There's a <tt>app/assets/frontend/base_variables.less</tt> file on which you can override bootstrap base variables.
+There's a <tt>app/assets/stylesheets/frontend/base_variables.less</tt> file on which you can override bootstrap base variables.
 
 For style development you can turn on Livereload, which connects rails to the browser, compiles styles and scripts and updates the browser as you save. Just start  process like this:
 
