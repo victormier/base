@@ -6,7 +6,7 @@ Base is a Rails application template with a bootstrap based backoffice and front
 
 ## Trouble with running migrations
 
-There's a known problem with translations related routes if translations table is not created. Just comment these lines, apply the migrations, and uncomment again:
+There's a known problem with translations related routes if translations table is not created. Just comment these lines in <tt>config/routes.rb</tt>, apply the migrations, and uncomment again:
 
   # mount Interpret::Engine => "/admin/interpret"
 
@@ -38,7 +38,7 @@ It is important not to miss the interpret update task, because otherways new tra
 
 == Frontend
 
-There's a fronted/base_variables.less file on which you can override bootstrap base variables.
+There's a <tt>fronted/base_variables.less</tt> file on which you can override bootstrap base variables.
 
 For style development you can turn on Livereload, which connects rails to the browser, compiles styles and scripts and updates the browser as you save. Just start  process like this:
 
