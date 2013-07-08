@@ -17,12 +17,12 @@ There's a known problem with translations related routes if translations table i
 
 == Deployment
 
-There's a `deploy` rake task that deploys to heroku. Still not much tested. For setting it up you have to change the following lines in `lib/tasks/deploy.rake` (just the production one if you don't have a stagin environment):
+There's a <tt>deploy</tt> rake task that deploys to heroku. Still not much tested. For setting it up you have to change the following lines in <tt>lib/tasks/deploy.rake</tt> (just the production one if you don't have a staging environment):
 
   PRODUCTION_APP = 'YOUR_PRODUCTION_APP_NAME_ON_HEROKU'
   STAGING_APP = 'YOUR_STAGING_APP_NAME_ON_HEROKU'
 
-It marks deploys and releases and there are several tasks. The main one is:
+It marks deploys as releases and there are several tasks. The main one is:
 
   rake deploy_production
 
