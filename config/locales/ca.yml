@@ -5,6 +5,7 @@ ca:
     logout: Logout
     login: Entrar
     you_sure: N'estàs segur?
+    edit: Editar
   admin:
     translations:
       title: Traduccions

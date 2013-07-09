@@ -5,6 +5,7 @@ es:
     logout: Logout
     login: Login
     you_sure: Estás seguro?
+    edit: Editar
   admin:
     translations:
       title: Traducciones
