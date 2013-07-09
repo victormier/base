@@ -25,6 +25,7 @@ gem 'rails-i18n'
 gem 'i18n_routing'
 gem 'armot'
 gem 'interpret', ">= 1.1.1"
+gem 'i18n-active_record', :git => "git://github.com/rogercampos/i18n-active_record.git", :require => 'i18n/active_record'
 
 # Utils
 gem 'roo'
