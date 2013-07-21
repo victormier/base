@@ -3,4 +3,5 @@
 //= require best_in_place
 //= require twitter/bootstrap/bootstrap-alert
 //= require twitter/bootstrap/bootstrap-modal
+//= require redactor
 //= require admin/end.js
