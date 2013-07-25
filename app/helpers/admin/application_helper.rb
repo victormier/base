@@ -25,4 +25,8 @@ module Admin::ApplicationHelper
       yield
     end
   end
+
+  def with_publication(obj)
+    yield(obj.published? ? ['Published', 'btn-info'] : ['Publish', ''])
+  end
 end
