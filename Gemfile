@@ -12,6 +12,7 @@ gem 'pg'
 # Frontend
 gem 'slim-rails'
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 gem 'simple_form'
 gem 'quiet_assets'
 
@@ -22,6 +23,9 @@ gem 'sorcery'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog'
+
+# Utils
+gem 'ranked-model'
 
 group :assets do
   # CSS and JS
