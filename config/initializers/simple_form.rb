@@ -26,12 +26,12 @@ SimpleForm.setup do |config|
   end
 
   # Custom wrapper
-  config.wrappers :with_controls, :class => 'form--horizontal__control-group',
+  config.wrappers :with_controls, :class => 'control-group',
     :hint_class => :field_with_hint, :error_class => :field_with_errors do |b|
     b.use :html5
     b.use :placeholder
-    b.use :label
-    b.use :tag => 'div', :class => 'form--horizontal__controls' do |ba|
+    b.use :label, class: 'control-label'
+    b.use :tag => 'div', :class => 'controls' do |ba|
       ba.use :input
       ba.use :error, :tag => :span, :class => :'help-inline'
       ba.use :hint,  :tag => :span, :class => :'help-block'
