@@ -29,4 +29,8 @@ module Admin::ApplicationHelper
   def with_publication(obj)
     yield(obj.published? ? ['Published', 'btn-info'] : ['Publish', ''])
   end
+
+  def with_featuring(obj)
+    yield(obj.featured? ? ['Featured', 'btn-success'] : ['Make Featured', ''])
+  end
 end
