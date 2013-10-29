@@ -33,4 +33,12 @@ class ImageUploader < BaseUploader
       img
     end
   end
+
+  def set_largest(width, height)
+    ratio = Float(width) / Float(height)
+    manipulate! do |img|
+      ratio_img = Float(img['width']) / Float(img['height'])
+      img = ratio_img >= ratio ? set_width(width) : set_height(height)
+    end
+  end
 end
