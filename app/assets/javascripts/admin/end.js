@@ -4,8 +4,9 @@ $(document).ready(function() {
   // Setup submit on change
   $("select.submit-on-change").change(function() {
     $(this).parents("form").submit();
+  });
 
-  // Set redactor textareas       
+  // Set redactor textareas
   $('textarea.redactor').redactor({
     linebreaks: true,
     buttons: ['html', '|', 'formatting', '|', 'bold', 'italic', 'underline', '|',
